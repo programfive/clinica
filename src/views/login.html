@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="/css/tailwind.css" rel="stylesheet">
+    <style>
+        .animate__animated.animate__fadeIn {
+            --animate-duration: 0.5s;
+        }
+        .animate__delay-05s {
+            animation-delay: 0.5s;
+        }
+        .animate__delay-075s {
+            animation-delay: 0.75s;
+        }
+    </style>
+</head>
+<body class="h-screen">
+    <main class="flex items-center m-auto justify-center h-full gap-8 max-w-7xl animate__animated animate__fadeIn">
+        <section class='bg-orange-50 p-4 rounded-lg relative animate__animated animate__fadeIn animate__delay-05s'>
+            <img class="w-24 h-24 md:w-36 absolute top-0 left-4 animate__animated animate__fadeIn animate__delay-075s" src="/images/logo.svg" alt="Logo">
+            <img class="hidden mt-12 md:block md:max-w-[640px] md:h-[640px] animate__animated animate__fadeIn animate__delay-1s" src="/images/login.png" alt="Login image">
+        </section>
+        <section class="bg-white p-8 w-full max-w-lg animate__animated animate__fadeIn animate__delay-05s">
+            <h2 class="text-6xl text-orange-500 text-center font-bold mb-8 animate__animated animate__fadeIn animate__delay-075s">Login</h2>
+            <form id="loginForm" class="animate__animated animate__fadeIn animate__delay-1s">
+                <div class="mb-4">
+                    <label for="username" class="block mb-2 text-gray-800 text-md">Username</label>
+                    <input type="text" id="username" name="username" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <p id="usernameError" class="text-red-500 text-sm mt-2"></p>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-gray-800 text-md">Password</label>
+                    <input type="password" id="password" name="password" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <p id="passwordError" class="text-red-500 text-sm mt-2"></p>
+                    <p id="credentialError" class="text-red-500 text-sm mt-2"></p>
+                </div>
+                <button type="submit"
+                    class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
+                    Iniciar Sesión
+                </button>
+            </form>
+            <div class="mt-6 border-t border-gray-200 pt-6 animate__animated animate__fadeIn animate__delay-1s">
+                <p class="text-center text-sm text-gray-800">
+                    ¿No tienes una cuenta?
+                    <a href="/register" class="text-orange-500 hover:text-orange-600 font-semibold">Regístrate</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="/script/login.js"></script>
+</body>
+</html>
