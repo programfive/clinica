@@ -25,7 +25,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente.
 2. Navega al directorio del proyecto:
 
     ```bash
-    cd nombre-del-repositorio
+    cd clinica
     ```
 
 3. Instala las dependencias:
@@ -35,14 +35,22 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente.
     ```
 
 4. Crea un archivo `.env` basado en el archivo `.env.example` y configura las variables necesarias para tu entorno.
+    ```bash
+    PORT=
+    DB_HOST=
+    DB_USER=
+    DB_PASS=
+    DB_NAME=
+    JWT_SECRET=
+    ```
 
-5. Ejecuta la aplicación en modo desarrollo:
+6. Ejecuta la aplicación en modo desarrollo:
 
     ```bash
     npm run dev
     ```
 
-6. Abre tu navegador y ve a `http://localhost:3000` para ver la aplicación.
+7. Abre tu navegador y ve a `http://localhost:3000` para ver la aplicación.
 
 ## Tecnologías Utilizadas
 
